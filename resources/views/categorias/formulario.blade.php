@@ -38,5 +38,5 @@
 
 <!--
     Criar um banco de dados
-    php artisan make:migration create_table_marca
+    php artisan make:migration nome_da_tabela
 -->

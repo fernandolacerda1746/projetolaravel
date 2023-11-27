@@ -5,6 +5,9 @@ use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\CorController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\LojaController;
+use App\Http\Controllers\CarrinhoController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,5 +57,21 @@ Route::group(['prefix'=>'produtos'], function(){
 
 });
 
-Route::get('/', [MarcaController::class, 'index']);
+Route::group(['prefix'=> 'loja'], function(){
+    Route::get('/',[LojaController::class, 'index']);
+    Route::get('/consultamarca/{id}',[LojaController::class, 'consultamarca']);
+    Route::get('/consultacategoria/{id}',[LojaController::class, 'consultacategoria']);
+});
+
+Route::group(['prefix'=> 'carrinho'], function(){
+    Route::get('/', [CarrinhoController::class, 'index']);
+});
+
+Route::group(['prefix'=> 'login'], function(){
+    Route::get('/', [LoginController::class, 'index']);
+    Route::post('/', [LoginController::class, 'login'])->name('login');
+});
+
+Route::get('/', [LojaController::class, 'index']);
+
 

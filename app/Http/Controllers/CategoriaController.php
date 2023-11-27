@@ -14,7 +14,7 @@ class CategoriaController extends Controller
         [
             'categoria' => $dados
         ]
-    );
+        );
     }
 
     public function inserir(){
@@ -30,10 +30,6 @@ class CategoriaController extends Controller
 
         return redirect("/categorias");
 
-        /*echo $request->input("nome");
-        echo $request->input("nome_fantasia");
-        echo $request->input("situacao");
-        exit;*/
     }
 
     public function excluir($id){
