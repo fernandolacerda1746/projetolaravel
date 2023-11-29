@@ -69,7 +69,6 @@ Route::group(['prefix'=> 'carrinho'], function(){
     Route::get('/{id}', [CarrinhoController::class, 'add_produto'])->name('adicionar.produto');
     Route::get('/adicionar/{id}', [CarrinhoController::class, 'add_quantidade'])->name('adicionar.quantidade');
     Route::get('/remover/{id}', [CarrinhoController::class, 'remove_produto'])->name('remover.produto');
-    Route::get('/inserir',[ProdutoController::class, 'inserir']);
     Route::get('/alterar/{id}',[CarrinhoController::class, 'alterar']);
     Route::post('/alterar',[CarrinhoController::class, 'alterar_carrinho']);
     Route::get('/excluir/{id}',[CarrinhoController::class, 'excluir']);
