@@ -76,9 +76,9 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/carrinho/admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Orçamentos</span></a>
+                    <span>Compras</span></a>
             </li>
 
             <li class="nav-item">

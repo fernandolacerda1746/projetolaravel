@@ -6,6 +6,7 @@
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Categoria</th>
@@ -16,11 +17,12 @@
             <tbody>
                 @foreach ($produto as $linha)
                     <tr>
+                        <td>{{ $linha['id'] }}</td>
                         <td>{{ $linha['nome'] }}</td>
                         <td>{{ $linha['marca'] }}</td>
                         <td>{{ $linha['categoria'] }}</td>
                         <td>{{ number_format($linha['preco']) }}</td>
-                        <td><a class="btn btn-outline-dark" href="#">Add to cart</a></td>
+                        <td><a class="btn btn-outline-dark" href="/carrinho/{{ $linha['id'] }}">Add to cart</a></td>
                     </tr>
                 @endforeach
             </tbody>

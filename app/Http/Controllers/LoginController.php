@@ -36,12 +36,6 @@ class LoginController extends Controller
         }
     }
 
-    public function logout()
-    {
-        Session::forget('usuario_email'); 
-        return redirect('/loja');
-    }
-
     private function select()
     {
         $marcas = Marca::all()->toArray();
